@@ -75,3 +75,4 @@ group :test do
 end
 gem 'pg', '~> 1.4', '>= 1.4.6'
 gem 'devise'
+gem "rolify"
