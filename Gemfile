@@ -74,3 +74,4 @@ group :test do
   gem "webdrivers"
 end
 gem 'pg', '~> 1.4', '>= 1.4.6'
+gem 'devise'
