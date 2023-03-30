@@ -76,6 +76,7 @@ group :test do
   gem 'webdrivers'
 end
 gem 'devise'
+gem 'letter_opener', group: :development
 gem 'pg', '~> 1.4', '>= 1.4.6'
 gem 'rolify'
 gem 'rubocop', require: false
