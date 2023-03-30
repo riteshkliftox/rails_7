@@ -10,12 +10,9 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <% if user_signed_in? %>
-      <%= render 'layouts/sidebar/nav_sidebar'%>
-    <% end %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body class="container mr-top">
+    <%= render partial: 'common/flash_notification' %>
+    <%= render partial: 'common/sidebar' %>
     <%= yield %>
   </body>
 </html>
