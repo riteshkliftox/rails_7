@@ -6,8 +6,13 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-
+  `3.2.1`
 * System dependencies
+  `Node Version` 
+    `18.12.1`
+  
+  `Npm Version` 
+    `8.19.2`
 
 * Configuration
 
