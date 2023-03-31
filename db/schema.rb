@@ -12,9 +12,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_230_330_075_040) do
+ActiveRecord::Schema[7.0].define(version: 20_230_330_120_859) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
+
+  create_table 'profiles', force: :cascade do |t|
+    t.string 'first_name'
+    t.string 'last_name'
+    t.string 'gender'
+    t.string 'city'
+    t.string 'state'
+    t.string 'country'
+    t.bigint 'mobile_number'
+    t.date 'date_of_birth'
+    t.integer 'user_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
 
   create_table 'roles', force: :cascade do |t|
     t.string 'name'
@@ -22,8 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 20_230_330_075_040) do
     t.bigint 'resource_id'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
-    t.index %w[name resource_type resource_id],
-            name: 'index_roles_on_name_and_resource_type_and_resource_id'
+    t.index %w[name resource_type resource_id], name: 'index_roles_on_name_and_resource_type_and_resource_id'
     t.index %w[resource_type resource_id], name: 'index_roles_on_resource'
   end
 

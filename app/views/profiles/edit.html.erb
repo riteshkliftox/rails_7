@@ -1,0 +1,65 @@
+<div class="row login-form">
+  <h2>Edit Profile</h2>
+  <%= form_for @profile do |f| %>
+    <div class="form-outline mb-6">
+      <%= f.label :email %><br />
+      <%= f.text_field :email, value: f.object.user.email, class: "form-control", readonly: true %>
+    </div>
+
+    <div class="form-outline mb-6">
+      <%= f.label :first_name %><br />
+      <%= f.text_field :first_name, class: "form-control" %>
+    </div>
+
+    <div class="form-outline mb-6">
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name, class: "form-control" %>
+    </div>
+    <div class="form-outline mb-6">
+      <%= f.label :gender %><br />
+      <div class="form-check">
+        <%= f.radio_button :gender, :male ,class: "form-check-input"%>
+        <label class="form-check-label" for="flexRadioDefault1">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+        <%= f.radio_button :gender, :female , class: "form-check-input"%>
+        <label class="form-check-label" for="flexRadioDefault1">
+          Female
+        </label>
+      </div>
+    </div>
+
+    <div class="form-outline mb-6">
+      <%= f.label :mobile_number %><br />
+      <%= f.text_field :mobile_number, class: "form-control" %>
+    </div>
+
+    <div class="form-outline mb-6">
+      <%= f.label :date_of_birth %><br />
+      <%= f.date_field :date_of_birth, class: "form-control" %>
+    </div>
+
+    <div class="form-outline mb-6">
+      <%= f.label :city %><br />
+      <%= f.text_field :city, class: "form-control" %>
+    </div>
+
+    <div class="form-outline mb-6">
+      <%= f.label :state %><br />
+      <%= f.text_field :state, class: "form-control" %>
+    </div>
+
+    <div class="form-outline mb-6">
+      <%= f.label :country %><br />
+      <%= f.text_field :country, class: "form-control" %>
+    </div>
+
+    <div class="form-outline mb-6">
+    </br>
+      <%= f.submit "Update", class: "btn btn-primary" %> 
+      <%= link_to "Back", :back %>
+    </div>
+  <% end %>
+</div>
